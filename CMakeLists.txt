@@ -61,8 +61,9 @@ if(WITH_GTEST)
     find_package(GTest  REQUIRED)
     add_executable(test_versiong test_versiong.cpp)
     add_executable(test_printip test_printip.cpp)
+    add_executable(test_sfinae test_sfinae.cpp)
 
-    target_compile_definitions(test_printip PUBLIC -DUSE_DBG_TRACE)
+    #target_compile_definitions(test_printip PUBLIC -DUSE_DBG_TRACE)
 
     set_target_properties(test_versiong PROPERTIES
         CXX_STANDARD 14
@@ -74,11 +75,20 @@ if(WITH_GTEST)
         CXX_STANDARD_REQUIRED ON
     )
 
+    set_target_properties(test_sfinae PROPERTIES
+        CXX_STANDARD 14
+        CXX_STANDARD_REQUIRED ON
+    )
+
     target_link_libraries(test_versiong
         gtest
         libprint_ip
     )
     target_link_libraries(test_printip
+        gtest
+        libprint_ip
+    )
+    target_link_libraries(test_sfinae
         gtest
         libprint_ip
     )
@@ -103,6 +113,9 @@ if (MSVC)
         target_compile_options(test_printip PRIVATE
             /W4
         )
+        target_compile_options(test_sfinae PRIVATE
+            /W4
+        )
     endif()
 else ()
     target_compile_options(print_ip PRIVATE
@@ -121,6 +134,9 @@ else ()
             -Wall -Wextra -pedantic -Werror
         )
         target_compile_options(test_printip PRIVATE
+            -Wall -Wextra -pedantic -Werror
+        )
+        target_compile_options(test_sfinae PRIVATE
             -Wall -Wextra -pedantic -Werror
         )
     endif()
@@ -144,4 +160,5 @@ if(WITH_GTEST)
     enable_testing()
     add_test(test_versiong test_versiong)
     add_test(test_printip test_printip)
+    add_test(test_printip test_sfinae)
 endif()
