@@ -3,6 +3,7 @@
 #include "vers.h"
 #include "myprintip.h"
 
+using namespace std::literals::string_literals;
 
 // print_ip( int16_t{0} ); // 0.0 
 // print_ip( int32_t{2130706433} ); // 127.0.0.1 
@@ -22,7 +23,8 @@ int main(int, char **)
 		print_ip( std::string{"Hello, World!"} ) << std::endl; // Hello, World! 
 		print_ip( std::vector<int>{100, 200, 300, 400} ) << std::endl; // 100.200.300.400 
 		print_ip( std::list<short>{400, 300, 200, 100} ) << std::endl; // 400.300.200.100 
-		//print_ip( std::make_tuple(123, 456, 789, 0) ) << std::endl; // 123.456.789.0
+		print_ip( std::make_tuple(123, 456, 789, 0) ) << std::endl; // 123.456.789.0
+		//print_ip( std::make_tuple(123, "456", 789, "0"s) ) << std::endl; // 123.456.789.0
 	}	
 	catch(const std::exception &e)
 	{

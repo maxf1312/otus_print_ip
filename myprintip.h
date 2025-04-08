@@ -8,13 +8,14 @@
 #include <vector>
 #include <list>
 #include <algorithm>
+#include "mytuple_helpers.h"
 #include "mydbgtrace.h"
 
 namespace otus_hw4{
 
 
 	template<typename OStreamT, typename T, typename PostfixStrCharT = typename OStreamT::char_type, typename PrefixStrCharT = typename OStreamT::char_type>
-	OStreamT& print_val(OStreamT& os, T v, PostfixStrCharT postfix = {}, PrefixStrCharT prefix = {} )
+	OStreamT& print_val(OStreamT& os, T v, PostfixStrCharT postfix = {}, PrefixStrCharT prefix = {} ) 
 	{
 		if (PrefixStrCharT() != prefix)
 			os << prefix;
@@ -106,6 +107,45 @@ namespace otus_hw4{
 		return print_ip0(os, tail_args... );
 	}
 
+	template<size_t elem_idx, class TupleT>
+	struct TuplePrintHelper_t
+	{
+		static std::ostream&  print_tuple(std::ostream& os, TupleT const& t)
+		{
+			TuplePrintHelper_t<elem_idx - 1, TupleT>::print_tuple(os, t);
+			return print_val(os, std::get<elem_idx - 1>(t), "", ".");
+		}
+	};
+
+	template<class TupleT>
+	struct TuplePrintHelper_t<1, TupleT>
+	{
+		static std::ostream& print_tuple(std::ostream& os, TupleT const& t)
+		{
+			return print_val(os, std::get<0>(t), "", "");
+		}
+	};
+
+	template<class... TupleTypesT
+			,std::enable_if_t<sizeof...(TupleTypesT) != 0, int> = 0
+		    ,std::enable_if_t<TupleElemSameType<std::tuple<TupleTypesT...>>::value == true, int> = 0
+	>
+	auto& print_ip0(std::ostream& os, std::tuple<TupleTypesT...> tuple)
+	{
+		 DBG_TRACE( "print_ip0_tuple", "tuple" );
+		 using tuple_t = std::tuple<TupleTypesT...>;
+		 return TuplePrintHelper_t<std::tuple_size<tuple_t>::value, tuple_t>::print_tuple(os, tuple);
+	}
+
+	template<class... TupleTypesT
+			,std::enable_if_t<sizeof...(TupleTypesT) == 0, int> = 0
+	>
+	auto& print_ip0(std::ostream& os, std::tuple<TupleTypesT...> )
+	{
+		 DBG_TRACE( "print_ip0_empty_tuple", "tuple" );
+		 return os;
+	}
+ 
 	template<typename T>
 	auto& print_ip(T&& v)
 	{

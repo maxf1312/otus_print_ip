@@ -2,10 +2,11 @@
 #include <sstream>
 #include <list>
 #include <tuple>
-#ifndef __PRETTY_FUNCTION__
-#include "pretty.h"
-#endif
+//#ifndef __PRETTY_FUNCTION__
+//#include "pretty.h"
+//#endif
 #include "mysfinae.h"
+#include "mytuple_helpers.h"
 
 
 int main(int argc, char **argv)
@@ -16,6 +17,25 @@ int main(int argc, char **argv)
 
 using namespace std::literals::string_literals;
 using namespace otus_hw4;
+
+
+TEST(test_mysfinae, test_sfinae_tuple1)
+{
+    std::cout << TupleIndexHelper_t<int, std::tuple<short, std::string, int>>::value << std::endl; 
+    std::cout << TupleIndex_t<short, std::tuple<int, std::string, short>>::value << std::endl; 
+    std::cout << TupleIndex_t<short, std::tuple<int, std::string, short>>::value << std::endl; 
+    EXPECT_TRUE( !(TupleElemSameType<std::tuple<int, std::string, short>>::value) ) << "ddd" << std::endl;
+    std::cout << TupleElemSameType<std::tuple<int, std::string, short>>::value << std::endl; 
+    EXPECT_TRUE( true == (TupleElemSameType<std::tuple<int, int, int>>::value) ) << "int" << std::endl;
+    std::cout << TupleElemSameType<std::tuple<int, int, int>>::value << std::endl; 
+    EXPECT_TRUE( true == (TupleElemSameType<std::tuple<int, int>>::value) ) << "int 2" << std::endl;
+    std::cout << TupleElemSameType<std::tuple<int, int>>::value << std::endl; 
+    EXPECT_TRUE( true ==  (TupleElemSameType<std::tuple<int>>::value) ) << "int 1" << std::endl;
+    std::cout << TupleElemSameType<std::tuple<int>>::value << std::endl; 
+    EXPECT_TRUE( true ==  (TupleElemSameType<std::tuple<>>::value) ) << "empty" << std::endl;
+    std::cout << TupleElemSameType<std::tuple<>>::value << std::endl; 
+    
+}
 
 
 TEST(test_mysfinae, test_sfinae_1)

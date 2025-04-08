@@ -49,3 +49,17 @@ TEST(test_myprintip, test_print_ip0_list)
     EXPECT_TRUE( std::cout );
 }
 
+TEST(test_myprintip, test_print_ip0_tuple)
+{
+    auto t0 = std::make_tuple(-3, 89, 200, 12);
+    print_ip0(std::cout, t0) << std::endl;
+
+    //auto t1 = std::make_tuple(-3, "1789", "2010"s, 12.5);
+    //print_ip0(std::cout, t1) << std::endl;
+
+    auto t2 = std::make_tuple();
+    print_ip0(std::cout, t2) << std::endl;
+    
+    EXPECT_TRUE( std::cout );
+}
+
