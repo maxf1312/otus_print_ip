@@ -1,3 +1,15 @@
+/**
+ * @file myprintip.h
+ * @author @MaximF
+ * @brief Реализация печати условного ip адреса в рамках ДЗ4
+ * @version 0.1
+ * @date 2025-04-09
+ * 
+ * @copyright Copyright (c) 2025 
+ * 
+ * @details print_ip0 - шаблоны функции реализации для вывода в указанный поток. 
+ * 
+ */
 #pragma once
 #ifndef __MYPRINTIP_H__
 #define __MYPRINTIP_H__
@@ -13,7 +25,16 @@
 
 namespace otus_hw4{
 
-
+	/// @brief Шаблон вывода значения, обрамленного префиксом и суффиксом
+	/// @tparam OStreamT - тип потока
+	/// @tparam T  - тип значения
+	/// @tparam PrefixStrCharT  - тип префискса
+	/// @tparam PostfixStrCharT - тип суффикса 
+	/// @param os - поток
+	/// @param v - значение
+	/// @param postfix - суффикс
+	/// @param prefix  - префикс
+	/// @return - поток после вывода в него значения v
 	template<typename OStreamT, typename T, typename PostfixStrCharT = typename OStreamT::char_type, typename PrefixStrCharT = typename OStreamT::char_type>
 	OStreamT& print_val(OStreamT& os, T v, PostfixStrCharT postfix = {}, PrefixStrCharT prefix = {} ) 
 	{
@@ -27,6 +48,12 @@ namespace otus_hw4{
 		return os;
 	}
 
+	/// @brief шаблон для одиночного не целочисленного значения 
+	/// @tparam T тип
+	/// @tparam анонимный тип для SFINAE 
+	/// @param os поток для вывода
+	/// @param v  значение для вывода
+	/// @return поток после вывода в него
 	template<typename T
 			,typename = std::enable_if_t<!std::is_class<T>::value && 
 			                             (!std::is_integral<std::decay_t<T>>::value || 
@@ -38,6 +65,11 @@ namespace otus_hw4{
 		return print_val(os, v, "" );
 	}
 
+	/// @brief специализация для uint8_t, выводит как беззнаковое целое  [0,255]
+	/// @tparam  bool = true для SFINAE
+	/// @param os поток для вывода
+	/// @param v  значение для вывода
+	/// @return поток после вывода в него
 	template<std::enable_if_t<std::is_same<uint8_t, uint8_t>::value, bool> = true>
 	auto& print_ip0(std::ostream& os, uint8_t v)
 	{
@@ -45,6 +77,12 @@ namespace otus_hw4{
 	 	return print_val(os, static_cast<int16_t>(v) );
 	}
 
+	/// @brief перегрузка шаблона для контейнеров vector<> list<>
+	/// @tparam T тип контейнера
+	/// @tparam  bool = true для SFINAE
+	/// @param os поток для вывода
+	/// @param v  значение для вывода
+	/// @return поток после вывода в него
 	template<typename T
 			,std::enable_if_t<(std::is_class<std::decay_t<T>>::value 
 							   && (std::is_same<std::decay_t<T>, std::vector<typename T::value_type>>::value
@@ -61,6 +99,12 @@ namespace otus_hw4{
 		return os;
 	}
 
+	/// @brief перегрузка шаблона для целочисленного типа
+	/// @tparam T 
+	/// @tparam  bool = true для SFINAE
+	/// @param os поток для вывода
+	/// @param v  значение для вывода
+	/// @return поток после вывода в него
 	template<typename T
 			,std::enable_if_t<!std::is_class<std::decay_t<T>>::value && std::is_integral<std::decay_t<T>>::value && 
 						      !std::is_same<std::decay_t<T>, uint8_t>::value && 
@@ -86,6 +130,12 @@ namespace otus_hw4{
 		return os;
 	}
 
+	/// @brief перегрузка шаблона для класса, но не list<> или vector<>
+	/// @tparam T 
+	/// @tparam  bool = true для SFINAE
+	/// @param os поток для вывода
+	/// @param v  значение для вывода
+	/// @return поток после вывода в него
 	template<typename T
 			,std::enable_if_t<not (std::is_class<std::decay_t<T>>::value 
 									&& (std::is_same<std::decay_t<T>, std::vector<typename T::value_type>>::value
@@ -97,6 +147,14 @@ namespace otus_hw4{
 		 return print_val(os, v, "" );
 	}
 		
+	/// @brief перегрузка для варианта вывода нескольких значений
+	/// @tparam T первое занчение из списка для вывода
+	/// @tparam ...Args - типы остальных значений 
+	/// @tparam  bool = true для SFINAE
+	/// @param os поток для вывода
+	/// @param v  значение для вывода
+	/// @param ...tail_args - остальные значения
+	/// @return поток после вывода в него
 	template<typename T, class... Args>
 	auto& print_ip0(std::ostream& os, T v, Args...tail_args )
 	{
@@ -107,6 +165,9 @@ namespace otus_hw4{
 		return print_ip0(os, tail_args... );
 	}
 
+	/// @brief общий случай шаблона вспомогательной структуры для печати кортежа  
+	/// @tparam TupleT 
+	/// @tparam elem_idx 
 	template<size_t elem_idx, class TupleT>
 	struct TuplePrintHelper_t
 	{
@@ -117,6 +178,8 @@ namespace otus_hw4{
 		}
 	};
 
+	/// @brief специализация шаблона  вспомогательной структуры для печати кортежа для первого элемента кортежа
+	/// @tparam TupleT 
 	template<class TupleT>
 	struct TuplePrintHelper_t<1, TupleT>
 	{
@@ -126,6 +189,13 @@ namespace otus_hw4{
 		}
 	};
 
+	/// @brief общий случай шаблона печати кортежа по списку типов, кортеж не пустой и все элементы одного типа
+	/// @tparam ...TupleTypesT 
+	/// @tparam  
+	/// @tparam  
+	/// @param os 
+	/// @param tuple 
+	/// @return 
 	template<class... TupleTypesT
 			,std::enable_if_t<sizeof...(TupleTypesT) != 0, int> = 0
 		    ,std::enable_if_t<TupleElemSameType<std::tuple<TupleTypesT...>>::value == true, int> = 0
@@ -137,6 +207,12 @@ namespace otus_hw4{
 		 return TuplePrintHelper_t<std::tuple_size<tuple_t>::value, tuple_t>::print_tuple(os, tuple);
 	}
 
+	/// @brief перегрузка шаблона для пустого кортежа - ничего не печатает
+	/// @tparam ...TupleTypesT 
+	/// @tparam  
+	/// @param os 
+	/// @param  
+	/// @return 
 	template<class... TupleTypesT
 			,std::enable_if_t<sizeof...(TupleTypesT) == 0, int> = 0
 	>
@@ -146,6 +222,10 @@ namespace otus_hw4{
 		 return os;
 	}
  
+	/// @brief перегрузка шаблона печати для вывода одного значения в std::cout
+	/// @tparam T 
+	/// @param v 
+	/// @return 
 	template<typename T>
 	auto& print_ip(T&& v)
 	{
@@ -153,6 +233,12 @@ namespace otus_hw4{
 		 return print_ip0(std::cout, std::forward<T&&>(v) );
 	}
 
+	/// @brief перегрузка шаблона для списка значений 
+	/// @tparam ...Args 
+	/// @tparam T 
+	/// @param v 
+	/// @param ...tail_args 
+	/// @return 
 	template<typename T, class... Args>
 	auto& print_ip(T&& v, Args&&...tail_args )
 	{
