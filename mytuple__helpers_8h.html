@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>print_ip: Файл mytuple_helpers.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">print_ip<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">print_ip utility made for homework 4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#define-members">Макросы</a>  </div>
+  <div class="headertitle"><div class="title">Файл mytuple_helpers.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;tuple&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для mytuple_helpers.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="mytuple__helpers_8h__incl.png" border="0" usemap="#amytuple__helpers_8h" alt=""/></div>
+<map name="amytuple__helpers_8h" id="amytuple__helpers_8h">
+<area shape="rect" title=" " alt="" coords="18,5,143,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,73,105"/>
+<area shape="poly" title=" " alt="" coords="76,33,56,67,51,64,71,30"/>
+<area shape="rect" title=" " alt="" coords="97,79,146,105"/>
+<area shape="poly" title=" " alt="" coords="89,30,109,64,105,67,85,33"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="mytuple__helpers_8h__dep__incl.png" border="0" usemap="#amytuple__helpers_8hdep" alt=""/></div>
+<map name="amytuple__helpers_8hdep" id="amytuple__helpers_8hdep">
+<area shape="rect" title=" " alt="" coords="97,5,222,31"/>
+<area shape="rect" href="myprintip_8h.html" title="Реализация печати условного ip адреса в рамках ДЗ4." alt="" coords="58,79,141,105"/>
+<area shape="poly" title=" " alt="" coords="142,44,111,80,107,77,138,41"/>
+<area shape="rect" href="test__sfinae_8cpp.html" title=" " alt="" coords="165,79,274,105"/>
+<area shape="poly" title=" " alt="" coords="181,41,211,77,207,80,177,44"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="5,153,79,178"/>
+<area shape="poly" title=" " alt="" coords="82,118,54,154,50,151,78,115"/>
+<area shape="rect" href="test__printip_8cpp.html" title=" " alt="" coords="103,153,213,178"/>
+<area shape="poly" title=" " alt="" coords="121,115,150,150,146,154,117,118"/>
+</map>
+</div>
+</div>
+<p><a href="mytuple__helpers_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structotus__hw4_1_1TupleIndexHelper__t_3_01SomeT_00_01std_1_1tuple_3_4_01_4.html">otus_hw4::TupleIndexHelper_t&lt; SomeT, std::tuple&lt;&gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structotus__hw4_1_1TupleIndexHelper__t_3_01SomeT_00_01std_1_1tuple_3_01SomeT_00_01TailT_8_8_8_01_4_01_4.html">otus_hw4::TupleIndexHelper_t&lt; SomeT, std::tuple&lt; SomeT, TailT... &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structotus__hw4_1_1TupleIndexHelper__t_3_01SomeT_00_01std_1_1tuple_3_01FirstT_00_01TailT_8_8_8_01_4_01_4.html">otus_hw4::TupleIndexHelper_t&lt; SomeT, std::tuple&lt; FirstT, TailT... &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structotus__hw4_1_1TupleIndex__t.html">otus_hw4::TupleIndex_t&lt; SomeT, TupleT &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structotus__hw4_1_1TupleElemTypeHelper.html">otus_hw4::TupleElemTypeHelper&lt; elem_idx, TupleT &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structotus__hw4_1_1TupleElemTypeHelper_3_011_00_01TupleT_01_4.html">otus_hw4::TupleElemTypeHelper&lt; 1, TupleT &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structotus__hw4_1_1TupleElemTypeHelper_3_010_00_01TupleT_01_4.html">otus_hw4::TupleElemTypeHelper&lt; 0, TupleT &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structotus__hw4_1_1TupleElemSameType.html">otus_hw4::TupleElemSameType&lt; TupleT &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceotus__hw4.html">otus_hw4</a></td></tr>
+<tr class="memdesc:namespaceotus__hw4"><td class="mdescLeft">&#160;</td><td class="mdescRight">тестовые шаблоны для отладки SFINAE <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a04369e9e8126c3bddf543fd964daf7c6" id="r_a04369e9e8126c3bddf543fd964daf7c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04369e9e8126c3bddf543fd964daf7c6">__MYTUPLE_HELPERS_H__</a></td></tr>
+<tr class="separator:a04369e9e8126c3bddf543fd964daf7c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a04369e9e8126c3bddf543fd964daf7c6" name="a04369e9e8126c3bddf543fd964daf7c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04369e9e8126c3bddf543fd964daf7c6">&#9670;&#160;</a></span>__MYTUPLE_HELPERS_H__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __MYTUPLE_HELPERS_H__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

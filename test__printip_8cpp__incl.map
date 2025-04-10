@@ -1,0 +1,35 @@
+<map id="test_printip.cpp" name="test_printip.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="203,5,312,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,99,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="223,34,102,76,100,71,222,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="123,79,192,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="242,34,188,72,185,67,239,29"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="266,153,305,178"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="262,31,283,137,278,138,257,32"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="305,226,354,252"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="256,32,250,59,245,97,246,138,257,177,273,199,293,216,290,220,269,202,252,179,241,139,240,96,245,58,251,31"/>
+<area shape="rect" id="Node000006" href="$pretty_8h.html" title=" " alt="" coords="891,226,954,252"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="312,18,468,27,668,47,767,64,856,87,926,115,953,132,973,151,979,168,975,186,965,203,951,218,947,214,961,199,970,184,974,168,968,154,950,136,924,120,854,92,766,70,668,53,468,32,312,24"/>
+<area shape="rect" id="Node000007" href="$myprintip_8h.html" title="Реализация печати условного ip адреса в рамках ДЗ4." alt="" coords="554,79,638,105"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="313,28,539,76,538,81,312,34"/>
+<area shape="poly" id="edge11_Node000007_Node000004" title=" " alt="" coords="554,103,451,123,320,155,318,150,450,117,553,97"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="417,226,484,252"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="614,103,630,119,645,138,653,159,653,170,647,180,617,208,579,226,538,236,501,241,500,235,537,231,577,221,614,204,643,177,647,168,648,159,641,140,626,122,610,107"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="830,153,882,178"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="639,101,816,149,815,154,637,106"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="905,153,959,178"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="639,98,749,118,891,150,890,155,748,124,638,103"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="478,153,535,178"/>
+<area shape="poly" id="edge10_Node000007_Node000011" title=" " alt="" coords="583,107,535,145,532,141,579,103"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="559,153,633,178"/>
+<area shape="poly" id="edge12_Node000007_Node000012" title=" " alt="" coords="599,105,599,137,593,137,593,105"/>
+<area shape="rect" id="Node000013" href="$mytuple__helpers_8h.html" title=" " alt="" coords="328,153,453,178"/>
+<area shape="poly" id="edge13_Node000007_Node000013" title=" " alt="" coords="562,108,441,150,439,145,560,103"/>
+<area shape="rect" id="Node000014" href="$mydbgtrace_8h.html" title=" " alt="" coords="708,153,806,178"/>
+<area shape="poly" id="edge16_Node000007_Node000014" title=" " alt="" coords="624,103,717,144,715,148,622,108"/>
+<area shape="poly" id="edge15_Node000013_Node000005" title=" " alt="" coords="383,180,352,216,348,213,379,177"/>
+<area shape="poly" id="edge14_Node000013_Node000008" title=" " alt="" coords="403,177,433,213,429,216,399,180"/>
+<area shape="poly" id="edge17_Node000014_Node000006" title=" " alt="" coords="786,176,882,217,880,222,784,181"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="722,226,793,252"/>
+<area shape="poly" id="edge18_Node000014_Node000015" title=" " alt="" coords="760,179,760,211,755,211,755,179"/>
+</map>

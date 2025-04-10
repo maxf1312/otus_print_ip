@@ -1,0 +1,16 @@
+<map id="pretty.h" name="pretty.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="192,5,255,31"/>
+<area shape="rect" id="Node000002" href="$mydbgtrace_8h.html" title=" " alt="" coords="132,79,230,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,46,190,80,186,77,206,43"/>
+<area shape="rect" id="Node000005" href="$test__printip_8cpp.html" title=" " alt="" coords="236,226,345,252"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="234,45,245,78,289,225,284,227,240,80,229,47"/>
+<area shape="rect" id="Node000003" href="$myprintip_8h.html" title="Реализация печати условного ip адреса в рамках ДЗ4." alt="" coords="139,153,222,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="184,120,184,152,178,152,178,120"/>
+<area shape="rect" id="Node000006" href="$mysfinae_8h.html" title=" " alt="" coords="29,153,111,178"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="151,116,90,154,88,150,148,111"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html" title=" " alt="" coords="138,226,211,252"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="181,194,178,226,173,226,176,194"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="213,185,273,223,270,228,210,189"/>
+<area shape="rect" id="Node000007" href="$test__sfinae_8cpp.html" title=" " alt="" coords="5,226,114,252"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="69,194,64,226,59,225,64,193"/>
+</map>

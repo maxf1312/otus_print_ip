@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>print_ip: Файл test_printip.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">print_ip<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">print_ip utility made for homework 4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл test_printip.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;gtest/gtest.h&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;list&gt;</code><br />
+<code>#include &lt;tuple&gt;</code><br />
+<code>#include &quot;<a class="el" href="pretty_8h_source.html">pretty.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="myprintip_8h_source.html">myprintip.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для test_printip.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="test__printip_8cpp__incl.png" border="0" usemap="#atest__printip_8cpp" alt=""/></div>
+<map name="atest__printip_8cpp" id="atest__printip_8cpp">
+<area shape="rect" title=" " alt="" coords="203,5,312,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,99,105"/>
+<area shape="poly" title=" " alt="" coords="223,34,102,76,100,71,222,29"/>
+<area shape="rect" title=" " alt="" coords="123,79,192,105"/>
+<area shape="poly" title=" " alt="" coords="242,34,188,72,185,67,239,29"/>
+<area shape="rect" title=" " alt="" coords="266,153,305,178"/>
+<area shape="poly" title=" " alt="" coords="262,31,283,137,278,138,257,32"/>
+<area shape="rect" title=" " alt="" coords="305,226,354,252"/>
+<area shape="poly" title=" " alt="" coords="256,32,250,59,245,97,246,138,257,177,273,199,293,216,290,220,269,202,252,179,241,139,240,96,245,58,251,31"/>
+<area shape="rect" href="pretty_8h.html" title=" " alt="" coords="891,226,954,252"/>
+<area shape="poly" title=" " alt="" coords="312,18,468,27,668,47,767,64,856,87,926,115,953,132,973,151,979,168,975,186,965,203,951,218,947,214,961,199,970,184,974,168,968,154,950,136,924,120,854,92,766,70,668,53,468,32,312,24"/>
+<area shape="rect" href="myprintip_8h.html" title="Реализация печати условного ip адреса в рамках ДЗ4." alt="" coords="554,79,638,105"/>
+<area shape="poly" title=" " alt="" coords="313,28,539,76,538,81,312,34"/>
+<area shape="poly" title=" " alt="" coords="554,103,451,123,320,155,318,150,450,117,553,97"/>
+<area shape="rect" title=" " alt="" coords="417,226,484,252"/>
+<area shape="poly" title=" " alt="" coords="614,103,630,119,645,138,653,159,653,170,647,180,617,208,579,226,538,236,501,241,500,235,537,231,577,221,614,204,643,177,647,168,648,159,641,140,626,122,610,107"/>
+<area shape="rect" title=" " alt="" coords="830,153,882,178"/>
+<area shape="poly" title=" " alt="" coords="639,101,816,149,815,154,637,106"/>
+<area shape="rect" title=" " alt="" coords="905,153,959,178"/>
+<area shape="poly" title=" " alt="" coords="639,98,749,118,891,150,890,155,748,124,638,103"/>
+<area shape="rect" title=" " alt="" coords="478,153,535,178"/>
+<area shape="poly" title=" " alt="" coords="583,107,535,145,532,141,579,103"/>
+<area shape="rect" title=" " alt="" coords="559,153,633,178"/>
+<area shape="poly" title=" " alt="" coords="599,105,599,137,593,137,593,105"/>
+<area shape="rect" href="mytuple__helpers_8h.html" title=" " alt="" coords="328,153,453,178"/>
+<area shape="poly" title=" " alt="" coords="562,108,441,150,439,145,560,103"/>
+<area shape="rect" href="mydbgtrace_8h.html" title=" " alt="" coords="708,153,806,178"/>
+<area shape="poly" title=" " alt="" coords="624,103,717,144,715,148,622,108"/>
+<area shape="poly" title=" " alt="" coords="383,180,352,216,348,213,379,177"/>
+<area shape="poly" title=" " alt="" coords="403,177,433,213,429,216,399,180"/>
+<area shape="poly" title=" " alt="" coords="786,176,882,217,880,222,784,181"/>
+<area shape="rect" title=" " alt="" coords="722,226,793,252"/>
+<area shape="poly" title=" " alt="" coords="760,179,760,211,755,211,755,179"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627" id="r_a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fe6c5622570b9d883049ae2012e99ba" id="r_a0fe6c5622570b9d883049ae2012e99ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fe6c5622570b9d883049ae2012e99ba">TEST</a> (test_myprintip, test_print_ip0_1)</td></tr>
+<tr class="separator:a0fe6c5622570b9d883049ae2012e99ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a027654a3b52c776ec8cda2e2296afe" id="r_a9a027654a3b52c776ec8cda2e2296afe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a027654a3b52c776ec8cda2e2296afe">TEST</a> (test_myprintip, test_print_ip0_vec)</td></tr>
+<tr class="separator:a9a027654a3b52c776ec8cda2e2296afe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35515987f8ffa7b38a41595b72338726" id="r_a35515987f8ffa7b38a41595b72338726"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35515987f8ffa7b38a41595b72338726">TEST</a> (test_myprintip, test_print_ip0_list)</td></tr>
+<tr class="separator:a35515987f8ffa7b38a41595b72338726"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a860d258304be110853ffcfc56577f20f" id="r_a860d258304be110853ffcfc56577f20f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a860d258304be110853ffcfc56577f20f">TEST</a> (test_myprintip, test_print_ip0_tuple)</td></tr>
+<tr class="separator:a860d258304be110853ffcfc56577f20f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a227c7583161521c384337e44394dcdad" id="r_a227c7583161521c384337e44394dcdad"><td class="memTemplParams" colspan="2">template&lt;typename T, typename = std::enable_if_t&lt;!std::is_class&lt;T&gt;::value &amp;&amp; 			                             (!std::is_integral&lt;std::decay_t&lt;T&gt;&gt;::value || 										   std::is_same&lt;std::decay_t&lt;T&gt;, char&gt;::value), bool&gt;&gt; </td></tr>
+<tr class="memitem:a227c7583161521c384337e44394dcdad"><td class="memTemplItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="#a227c7583161521c384337e44394dcdad">print_ip0</a> (std::ostream &amp;os, T v)</td></tr>
+<tr class="memdesc:a227c7583161521c384337e44394dcdad"><td class="mdescLeft">&#160;</td><td class="mdescRight">шаблон для одиночного не целочисленного значения  <br /></td></tr>
+<tr class="separator:a227c7583161521c384337e44394dcdad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="a3c04138a5bfe5d72780bb7e82a18e627" name="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a227c7583161521c384337e44394dcdad" name="a227c7583161521c384337e44394dcdad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a227c7583161521c384337e44394dcdad">&#9670;&#160;</a></span>print_ip0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, typename = std::enable_if_t&lt;!std::is_class&lt;T&gt;::value &amp;&amp; 			                             (!std::is_integral&lt;std::decay_t&lt;T&gt;&gt;::value || 										   std::is_same&lt;std::decay_t&lt;T&gt;, char&gt;::value), bool&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto &amp; otus_hw4::print_ip0 </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>v</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>шаблон для одиночного не целочисленного значения </p>
+<p>перегрузка шаблона для класса, но не list&lt;&gt; или vector&lt;&gt;</p>
+<p>перегрузка шаблона для целочисленного типа</p>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>тип </td></tr>
+    <tr><td class="paramname">анонимный</td><td>тип для SFINAE </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>поток для вывода </td></tr>
+    <tr><td class="paramname">v</td><td>значение для вывода </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>поток после вывода в него</dd></dl>
+<dl class="tparams"><dt>Параметры шаблона</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td></td></tr>
+    <tr><td class="paramname">bool</td><td>= true для SFINAE </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>поток для вывода </td></tr>
+    <tr><td class="paramname">v</td><td>значение для вывода </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>поток после вывода в него </dd></dl>
+
+</div>
+</div>
+<a id="a0fe6c5622570b9d883049ae2012e99ba" name="a0fe6c5622570b9d883049ae2012e99ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fe6c5622570b9d883049ae2012e99ba">&#9670;&#160;</a></span>TEST() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">test_myprintip</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">test_print_ip0_1</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35515987f8ffa7b38a41595b72338726" name="a35515987f8ffa7b38a41595b72338726"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35515987f8ffa7b38a41595b72338726">&#9670;&#160;</a></span>TEST() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">test_myprintip</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">test_print_ip0_list</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a860d258304be110853ffcfc56577f20f" name="a860d258304be110853ffcfc56577f20f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a860d258304be110853ffcfc56577f20f">&#9670;&#160;</a></span>TEST() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">test_myprintip</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">test_print_ip0_tuple</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9a027654a3b52c776ec8cda2e2296afe" name="a9a027654a3b52c776ec8cda2e2296afe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a027654a3b52c776ec8cda2e2296afe">&#9670;&#160;</a></span>TEST() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">test_myprintip</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">test_print_ip0_vec</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,26 @@
+<map id="myprintip.h" name="myprintip.h">
+<area shape="rect" id="Node000001" title="Реализация печати условного ip адреса в рамках ДЗ4." alt="" coords="202,5,285,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="162,153,229,178"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,27,94,46,45,62,28,71,16,81,9,97,12,110,23,122,42,132,93,147,147,157,146,162,92,152,40,137,20,126,7,112,3,96,12,77,25,66,43,57,93,41,201,22"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="26,79,77,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="212,34,92,78,90,73,210,29"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="101,79,154,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="225,34,161,73,158,68,222,29"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="179,79,236,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="240,32,223,66,218,64,235,30"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="260,79,299,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="252,30,269,64,264,66,247,32"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="322,79,396,105"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="264,29,328,68,326,73,262,34"/>
+<area shape="rect" id="Node000008" href="$mytuple__helpers_8h.html" title=" " alt="" coords="421,79,546,105"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="285,29,429,72,427,77,283,34"/>
+<area shape="rect" id="Node000010" href="$mydbgtrace_8h.html" title=" " alt="" coords="570,79,668,105"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="286,25,556,76,555,81,285,30"/>
+<area shape="poly" id="edge8_Node000008_Node000002" title=" " alt="" coords="435,108,245,155,244,150,434,103"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="459,153,508,178"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="486,105,486,137,481,137,481,105"/>
+<area shape="rect" id="Node000011" href="$pretty_8h.html" title=" " alt="" coords="560,153,623,178"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="617,106,604,139,599,137,612,104"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="648,153,719,178"/>
+<area shape="poly" id="edge12_Node000010_Node000012" title=" " alt="" coords="632,103,664,139,661,143,628,107"/>
+</map>
